@@ -55,6 +55,23 @@ header a:hover, header a.active {
     border-radius: 5px;
 }
 
+.rolunk {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-column-gap: 6%;
+    margin: 0 50px;
+}
+
+.rolunk img {
+    max-width: 100%;
+}
+
+.rolunk p {
+    text-align: justify;
+    line-height: 1.5em;
+    margin-top: 0;
+}
+
 footer {
     grid-area: footer;
     display: flex;
