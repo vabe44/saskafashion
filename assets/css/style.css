@@ -1,0 +1,76 @@
+.site {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 40px auto 50px;
+    grid-template-areas:
+        "header header"
+        "menu menu"
+        "main main"
+        "footer footer";
+    width: 80%;
+    margin: 10px 10%;
+}
+
+.logo {
+    grid-area: header;
+    padding-top: 17px;
+    background-color: rgb(218,218,218);
+    text-align: center;
+}
+
+header {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(218,218,218);
+    border-top: 3px solid white;
+}
+
+header a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Myriad Pro",Arial, Helvetica, Sans-Serif;
+    font-size: 18px;
+    padding: 0 5px;
+    color: white;
+}
+
+header a:hover, header a.active {
+    color: #28cbd0;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: rgb(218,218,218);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.main-content img {
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(218,218,218);
+    text-align: center;
+    font-size: smaller;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
