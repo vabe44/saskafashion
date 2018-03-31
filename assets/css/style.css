@@ -51,11 +51,6 @@ header a:hover, header a.active {
     padding: 20px;
 }
 
-.main-content img {
-    border: 5px solid white;
-    border-radius: 5px;
-}
-
 .no-border {
     border: none !important;
 }
@@ -102,4 +97,31 @@ body {
 
 html {
     height: 100%;
+}
+
+.grid figure {
+    max-height: unset;
+}
+
+.grid figure figcaption {
+    padding: 0.5em 1em;
+    font-size: 1em;
+}
+
+figure.effect-sarah h2 {
+    padding: 0.25em 0;
+}
+
+figure.effect-sarah {
+    background: #28cbd0;
+}
+
+.slideshow figure {
+    height: auto;
+}
+
+.slideshow li {
+    top: 2.5%;
+    left: 33%;
+    margin: unset;
 }

@@ -6,7 +6,21 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SaskaFashion</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/demo.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/pater.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/component.css" /> -->
+    <link rel="stylesheet" href="assets/css/demo.css">
+	<link rel="stylesheet" href="assets/css/set1.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <script>
+        document.documentElement.className = 'js';
+    </script>
+
 </head>
 
 <body>
@@ -57,7 +71,54 @@
 
         <main class="main-content">
             <center>
-                <img src="assets/images/home.jpg" alt="Fooldal kep">
+
+
+					<div class="grid">
+						<a href="kollekciok/2017-osz-tel.html">
+							<figure class="effect-sarah">
+								<img src="assets/images/2017_osz_tel.jpg" alt="2017 Osz-tel kollekcio"/>
+								<figcaption>
+									<h2>2017 <span>ŐSZ - TÉL</span></h2>
+								</figcaption>
+							</figure>
+						</a>
+						<a href="kollekciok/2017-tavasz-nyar.html">
+							<figure class="effect-sarah">
+								<img src="assets/images/2017_tavasz_nyar.jpg" alt="2017 Tavasz-nyar kollekcio"/>
+								<figcaption>
+									<h2>2017 <span>TAVASZ - NYÁR</span></h2>
+								</figcaption>
+							</figure>
+						</a>
+					</div>
+
+
+                <div class="grid">
+					<a href="kollekciok/2015-osz-tel.html">
+						<figure class="effect-sarah">
+							<img src="assets/images/2015_osz_tel.jpg" alt="2015 Osz-tel kollekcio"/>
+							<figcaption>
+								<h2>2015 <span>ŐSZ - TÉL</span></h2>
+							</figcaption>
+						</figure>
+						</a>
+                </div>
+
+                <!-- <a href="#" class="tilter tilter--1">
+                    <figure class="tilter__figure">
+                        <img class="tilter__image" src="assets/images/home.jpg" alt="img01" />
+                        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                        <figcaption class="tilter__caption">
+                            <h3 class="tilter__title">Tanya Bondesta</h3>
+                            <p class="tilter__description">Toronto</p>
+                        </figcaption>
+                        <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+                            <path d="M20.5,20.5h260v375h-260V20.5z" />
+                        </svg>
+                    </figure>
+                </a> -->
+
+                <!-- <img src="assets/images/home.jpg" alt="Fooldal kep"> -->
             </center>
         </main>
 
@@ -65,6 +126,111 @@
             <p>1027. Budapest, Margit krt. 44. Tel.:+36-1-355-1925 Mobil: +36-30-365-8711</p>
         </footer>
     </div>
+
+    <script>
+        // For Demo purposes only (show hover effect on mobile devices)
+        [].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+            el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+        } );
+    </script>
+
+		<!-- <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+		<script src="assets/js/anime.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+		(function() {
+			var tiltSettings = [
+			{},
+			{
+				movement: {
+					imgWrapper : {
+						translation : {x: 10, y: 10, z: 30},
+						rotation : {x: 0, y: -10, z: 0},
+						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+					},
+					lines : {
+						translation : {x: 10, y: 10, z: [0,70]},
+						rotation : {x: 0, y: 0, z: -2},
+						reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+					},
+					caption : {
+						rotation : {x: 0, y: 0, z: 2},
+						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+					},
+					overlay : {
+						translation : {x: 10, y: -10, z: 0},
+						rotation : {x: 0, y: 0, z: 2},
+						reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
+					},
+					shine : {
+						translation : {x: 100, y: 100, z: 0},
+						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
+					}
+				}
+			},
+			{
+				movement: {
+					imgWrapper : {
+						rotation : {x: -5, y: 10, z: 0},
+						reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
+					},
+					caption : {
+						translation : {x: 30, y: 30, z: [0,40]},
+						rotation : {x: [0,15], y: 0, z: 0},
+						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
+					},
+					overlay : {
+						translation : {x: 10, y: 10, z: [0,20]},
+						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
+					},
+					shine : {
+						translation : {x: 100, y: 100, z: 0},
+						reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
+					}
+				}
+			},
+			];
+
+			function init() {
+				var idx = 0;
+				[].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) {
+					idx = pos%2 === 0 ? idx+1 : idx;
+					new TiltFx(el, tiltSettings[idx-1]);
+				});
+			}
+
+			// Preload all images.
+			imagesLoaded(document.querySelector('main'), function() {
+				document.body.classList.remove('loading');
+				init();
+			});
+
+			var pater = document.querySelector('.pater'),
+				paterSVG = pater.querySelector('.pater__svg'),
+				pathEl = paterSVG.querySelector('path'),
+				paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
+
+			pater.addEventListener('mouseenter', function() {
+				anime.remove(pathEl);
+				anime({
+					targets: pathEl,
+					d: paths.active,
+					duration: 400,
+					easing: 'easeOutQuad'
+				});
+			});
+
+			pater.addEventListener('mouseleave', function() {
+				anime.remove(pathEl);
+				anime({
+					targets: pathEl,
+					d: paths.default,
+					duration: 400,
+					easing: 'easeOutExpo'
+				});
+			});
+		})();
+		</script> -->
 
 </body>
 </html>
